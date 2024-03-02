@@ -15,11 +15,11 @@ public:
     int Size();
     void push_back(int num);
 
-    bool operator<(Array const& one);
-    bool operator==(Array const& one);
-    bool operator>(Array const& one);
-    bool operator!=(Array const& one);
-    int* operator+(Array const& one);
+    bool operator<(Array& one);
+    bool operator==(Array& one);
+    bool operator>(Array& one);
+    bool operator!=(Array& one);
+    int* operator+(Array& one);
     friend std::istream& operator>>(std::istream& input, Array& arr);
 };
 
