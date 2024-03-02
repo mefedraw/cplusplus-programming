@@ -18,10 +18,10 @@ class Triangle {
         
         Triangle(Coords side_a, Coords side_b, Coords side_c);
 
-        bool operator>(Triangle const& one);
-        bool operator==(Triangle const& one);
-        bool operator<(Triangle const& one);
-        bool operator!=(Triangle const& one);
+        bool operator>(Triangle& one);
+        bool operator==(Triangle& one);
+        bool operator<(Triangle& one);
+        bool operator!=(Triangle& one);
 
 };
 
