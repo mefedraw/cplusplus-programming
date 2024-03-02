@@ -39,23 +39,23 @@ int Array::Size() {
     return size;
 }
 
-bool Array::operator<(Array const& one) {
+bool Array::operator<(Array& one) {
     return size < one.size;
 }
 
-bool Array::operator==(Array const& one) {
+bool Array::operator==(Array& one) {
     return size == one.size;
 }
 
-bool Array::operator>(Array const& one) {
+bool Array::operator>(Array& one) {
     return size > one.size;
 }
 
-bool Array::operator!=(Array const& one) {
+bool Array::operator!=(Array& one) {
     return size != one.size;
 }
 
-int* Array::operator+(Array const& one) {
+int* Array::operator+(Array& one) {
     int* result = new int[(int)size + (int)one.size];
     int i = 0;
     for (; i < size; ++i) {
