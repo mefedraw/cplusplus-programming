@@ -16,28 +16,28 @@ Triangle::Triangle(Coords side_a, Coords side_b, Coords side_c) {
     third = sqrt((c.x - a.x) * (c.x - a.x) + (c.y - a.y) * (c.y - a.y)); // AC
 
 }
-bool Triangle :: operator>(Triangle const& one) {
+bool Triangle :: operator>(Triangle& one) {
     float p1 = (first + second + third) / 2;
     float p2 = (one.first + one.second + one.third) / 2;
 
     return sqrt(p1 * (p1 - first) * (p1 - second) * (p1 - third)) > sqrt(p2 * (p2 - one.first) * (p2 - one.second) * (p2 - one.third));
 }
 
-bool Triangle :: operator==(Triangle const& one) {
+bool Triangle :: operator==(Triangle& one) {
     float p1 = (first + second + third) / 2;
     float p2 = (one.first + one.second + one.third) / 2;
 
     return sqrt(p1 * (p1 - first) * (p1 - second) * (p1 - third)) == sqrt(p2 * (p2 - one.first) * (p2 - one.second) * (p2 - one.third));
 }
 
-bool Triangle :: operator<(Triangle const& one) {
+bool Triangle :: operator<(Triangle& one) {
     float p1 = (first + second + third) / 2;
     float p2 = (one.first + one.second + one.third) / 2;
 
     return sqrt(p1 * (p1 - first) * (p1 - second) * (p1 - third)) < sqrt(p2 * (p2 - one.first) * (p2 - one.second) * (p2 - one.third));
 }
 
-bool Triangle :: operator!=(Triangle const& one) {
+bool Triangle :: operator!=(Triangle& one) {
     float p1 = (first + second + third) / 2;
     float p2 = (one.first + one.second + one.third) / 2;
 
