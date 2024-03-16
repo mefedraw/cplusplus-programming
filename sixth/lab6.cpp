@@ -2,8 +2,6 @@
 #include <vector>
 #include "funcs.h"
 
-// I don't know, how to run this in VS and VS code, so if there are any mistakes - pull requsest will help
-
 template <typename T>
 bool predicat(T el) {
     return el > 0;
